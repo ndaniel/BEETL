@@ -51,7 +51,7 @@ cd BEETL
 mkdir build
 mkdir bin
 cd build
-../configure --prefix=$PWD/../bin
+../configure --prefix=$PWD/..
 make
 make install
 

@@ -20,9 +20,9 @@ External dependencies
 ---------------------
 
 On a clean Amazon Ubuntu instance, you would need:
-
+```
     sudo apt-get install unzip g++ make
-
+```
 
 On Mac with LLVM-clang (although unsupported as it doesn't have OpenMP), you may need to define `export CXX=c++; export CXXFLAGS="-stdlib=libc++"`
 
@@ -36,13 +36,26 @@ Assuming the following paths:
 - /sourcePath : BEETL source code directory
 - /buildPath : temporary build directory 
 - /installPath : final installation directory
-
+```
     cd /buildPath
     /sourcePath/configure --prefix=/installPath
     make
     make install
     export PATH=$PATH:/installPath/bin
+```
 
+A concrete example:
+```
+git clone https://github.com/ndaniel/BEETL
+cd BEETL
+mkdir build
+mkdir bin
+cd build
+../configure --prefix=$PWD/../bin
+make
+make install
+
+```
 
 Tools
 -----

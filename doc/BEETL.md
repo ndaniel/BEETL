@@ -48,13 +48,9 @@ A concrete example:
 ```
 git clone https://github.com/ndaniel/BEETL
 cd BEETL
-mkdir build
-mkdir bin
-cd build
-../configure --prefix=$PWD/..
+./configure --prefix=$PWD
 make
 make install
-
 ```
 
 Tools
